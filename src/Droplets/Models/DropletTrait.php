@@ -25,4 +25,10 @@ trait DropletTrait
 
         $this->addCast('metadata', AsMetadataObject::class . ':json');
     }
+
+    public function increaseTries()
+    {
+        $this->tries++;
+        $this->save();
+    }
 }
