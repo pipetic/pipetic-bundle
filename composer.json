@@ -1,0 +1,60 @@
+{
+  "name": "pipetic/bundle",
+  "type": "library",
+  "license": "MIT",
+  "description": "Pipetic Bundle",
+  "keywords": [],
+  "homepage": "https://github.com/pipetic/pipetic-bundle",
+  "authors": [
+    {
+      "name": "Gabriel Solomon",
+      "email": "hello@gabrielsolomon.ro"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Pipetic\\Bundle\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Pipetic\\Bundle\\Tests\\": "tests/src",
+      "Pipetic\\Bundle\\Tests\\Fixtures\\": "tests/fixtures"
+    }
+  },
+  "require": {
+    "php": ">=8.0",
+    "ext-json": "*",
+    "bytic/package-base": "^1.0",
+    "bytic/controllers": "^1.0",
+    "bytic/controllers-extra": "^1.0",
+    "bytic/migrations": "^0.12|^0.13",
+    "bytic/orm": "^0.9|^1.0",
+    "bytic/orm-filters": "^0.9|^1.0",
+    "bytic/orm-behaviors": "^0.9|^1.0",
+    "bytic/event-discovery": "^0.9 || ^1.0",
+    "bytic/event-dispatcher": "^1.0|^2.0",
+    "bytic/models-smart-properties": "^0.9|^1.0",
+    "bytic/translation": "^1.0|^2.0",
+    "bytic/actions": "dev-main",
+    "bytic/utility": "^1.0.73",
+    "bytic/money": "^1.0"
+  },
+  "require-dev": {
+    "bytic/view": "^1.0|^2.0",
+    "bytic/form": "^1.0|^2.0",
+    "bytic/admin-base": "^1.0|^2.0",
+    "bytic/phpqatools": "^1.0"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true,
+      "ergebnis/composer-normalize": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "bytic/phpqatools": true,
+      "php-http/discovery": true
+    }
+  }
+}
