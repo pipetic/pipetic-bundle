@@ -6,8 +6,6 @@ use ByTIC\Icons\Icons;
 use Pipetic\Bundle\Utility\PipeticModels;
 
 $item = $item ?? $this->item;
-$billingStatus = $billingStatus ?? ($this->billingStatus ?? $item->getBillingStatus());
-
 $billingStatusesRepository = $billingStatusesRepository ?? PipeticModels::droplets();
 
 $card = Card::make()

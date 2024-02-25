@@ -4,7 +4,7 @@ declare(strict_types=1);
 use Phinx\Db\Adapter\MysqlAdapter;
 use Phinx\Migration\AbstractMigration;
 
-final class PipeticDropsTable extends AbstractMigration
+final class PipeticDropletsTable extends AbstractMigration
 {
     /**
      * Change Method.
@@ -34,7 +34,7 @@ final class PipeticDropsTable extends AbstractMigration
             ->addColumn('tries', 'integer', ['null' => true, 'limit' => MysqlAdapter::INT_TINY])
             ->addColumn('status', 'enum', ['null' => true, 'values' => ['pending', 'retying', 'failed', 'sent']])
             ->addColumn('metadata', 'json', ['null' => true])
-            ->addColumn('issued_at', 'date', ['null' => true])
+            ->addColumn('sent_at', 'date', ['null' => true])
             ->addColumn('updated_at', 'timestamp', [
                 'default' => 'CURRENT_TIMESTAMP',
                 'update' => 'CURRENT_TIMESTAMP',

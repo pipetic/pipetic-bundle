@@ -25,6 +25,7 @@ trait DropletsTrait
 
     protected function initRelationsPipetic(): void
     {
+        $this->initRelationsPipeSubject();
     }
 
 

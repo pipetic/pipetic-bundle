@@ -19,7 +19,7 @@ trait CommonRecordsTrait
     protected function initRelations()
     {
         parent::initRelations();
-        $this->initRelationsBilling();
+        $this->initRelationsPipetic();
     }
 
     /**
