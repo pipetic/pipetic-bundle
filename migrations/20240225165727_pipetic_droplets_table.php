@@ -20,7 +20,7 @@ final class PipeticDropsTable extends AbstractMigration
     public function change(): void
     {
 
-        $table_name = 'pipetic_drops';
+        $table_name = 'pipetic_droplets';
         $exists = $this->hasTable($table_name);
         if ($exists) {
             return;

@@ -1,18 +1,21 @@
 <?php
 
-namespace Pipetic\Bundle\Drops\Models;
+namespace Pipetic\Bundle\Droplets\Models;
 
 use Pipetic\Bundle\Base\Models\Behaviours\Timestampable\TimestampableManagerTrait;
 use Pipetic\Bundle\Base\Models\Traits\HasDatabaseConnectionTrait;
+use Pipetic\Bundle\PipeSubject\ModelsRelated\HasSubject\HasSubjectRepositoryTrait;
 use Pipetic\Bundle\Utility\PackageConfig;
 use Pipetic\Bundle\Utility\PipeticModels;
 
-trait DropsTrait
+trait DropletsTrait
 {
     use TimestampableManagerTrait;
+    use HasSubjectRepositoryTrait;
+    use Behaviours\HasStatus\HasStatusRepositoryTrait;
     use HasDatabaseConnectionTrait;
 
-    protected function bootDropsTrait()
+    protected function bootDropletsTrait()
     {
 //        static::updating(function ($event) {
 //            /** @var Event $event */
@@ -20,23 +23,23 @@ trait DropsTrait
 //        });
     }
 
-    protected function initRelationsBilling(): void
+    protected function initRelationsPipetic(): void
     {
     }
 
 
     public function generatePrimaryFK()
     {
-        return 'drop_id';
+        return 'droplet_id';
     }
 
     protected function generateTable(): string
     {
-        return PackageConfig::tableName(PipeticModels::DROPS, Drops::TABLE);
+        return PackageConfig::tableName(PipeticModels::DROPLETS, Droplets::TABLE);
     }
 
     protected function generateMorphName(): string
     {
-        return Drops::CONTROLLER;
+        return Droplets::CONTROLLER;
     }
 }

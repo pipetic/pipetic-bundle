@@ -1,25 +1,28 @@
 <?php
 
-namespace Pipetic\Bundle\Drops\Models;
+namespace Pipetic\Bundle\Droplets\Models;
 
 use Pipetic\Bundle\Base\Models\Traits\CommonRecordTrait;
 use Nip\Records\Record;
 
 /**
- * Class Drop
+ * Class Droplet
+ * @property string $destination
  * @package Pipetic\Bundle\Drops\Models
  */
-class Drop extends Record
+class Droplet extends Record
 {
-    use DropTrait;
+    use DropletTrait;
     use CommonRecordTrait;
 
-    public const METADATA_EXTERNAL_LINK = 'external_link';
+
+    public function getDestinationName()
+    {
+        return $this->destination;
+    }
 
     public function getRegistry()
     {
         // TODO: Implement getRegistry() method.
     }
-
-
 }

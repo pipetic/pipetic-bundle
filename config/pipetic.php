@@ -1,14 +1,15 @@
 <?php
 
+use Pipetic\Bundle\Droplets\Models\Droplets;
 use Pipetic\Bundle\Utility\PipeticModels;
 
 return [
 
     'models' => array(
-        PipeticModels::DROPS => Invoices::class,
+        PipeticModels::DROPLETS => Droplets::class,
     ),
     'tables' => [
-        PipeticModels::DROPS => Invoices::TABLE,
+        PipeticModels::DROPLETS => Droplets::TABLE,
     ],
     'database' => [
         'connection' => 'default',

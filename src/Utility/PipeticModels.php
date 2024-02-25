@@ -5,15 +5,8 @@ declare(strict_types=1);
 namespace Pipetic\Bundle\Utility;
 
 use ByTIC\PackageBase\Utility\ModelFinder;
+use Pipetic\Bundle\Droplets\Models\Droplets;
 use Pipetic\Bundle\PipeticServiceProvider;
-use Marktic\Pipetic\PipeticStatuses\Models\PipeticStatuses;
-use Marktic\Pipetic\Contacts\Models\Contacts;
-use Marktic\Pipetic\ExternalSystems\Communications\Models\Communications;
-use Marktic\Pipetic\InvoiceLines\Models\InvoiceLines;
-use Marktic\Pipetic\Invoices\Models\Invoices;
-use Marktic\Pipetic\LegalEntities\Models\LegalEntities;
-use Marktic\Pipetic\Parties\Models\Parties;
-use Marktic\Pipetic\PostalAddresses\Models\PostalAddresses;
 use Nip\Records\RecordManager;
 
 /**
@@ -21,16 +14,16 @@ use Nip\Records\RecordManager;
  */
 class PipeticModels extends ModelFinder
 {
-    public const DROPS = 'drops';
+    public const DROPLETS = 'droplets';
 
-    public static function drops(): Invoices|RecordManager
+    public static function droplets(): Droplets|RecordManager
     {
-        return static::getModels(self::DROPS, Invoices::class);
+        return static::getModels(self::DROPLETS, Droplets::class);
     }
 
-    public static function dropsClass(): string
+    public static function dropletsClass(): string
     {
-        return static::getConfigVar('models.' . self::DROPS, Invoices::class);
+        return static::getConfigVar('models.' . self::DROPLETS, Droplets::class);
     }
 
     protected static function packageName(): string

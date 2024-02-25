@@ -1,6 +1,6 @@
 <?php
 
-namespace Pipetic\Bundle\Drops\DropStatuses;
+namespace Pipetic\Bundle\Droplets\Statuses;
 
 /**
  *
