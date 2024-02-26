@@ -32,7 +32,7 @@ final class PipeticDropletsTable extends AbstractMigration
             ->addColumn('subject_id', 'integer', ['null' => true])
             ->addColumn('subject', 'string', ['null' => true])
             ->addColumn('tries', 'integer', ['null' => true, 'limit' => MysqlAdapter::INT_TINY])
-            ->addColumn('status', 'enum', ['null' => true, 'values' => ['pending', 'retying', 'failed', 'sent']])
+            ->addColumn('status', 'enum', ['null' => true, 'values' => ['pending', 'retrying', 'failed', 'sent']])
             ->addColumn('metadata', 'json', ['null' => true])
             ->addColumn('sent_at', 'date', ['null' => true])
             ->addColumn('updated_at', 'timestamp', [
