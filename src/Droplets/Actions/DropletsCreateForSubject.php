@@ -16,6 +16,8 @@ class DropletsCreateForSubject extends Action
 
     public const ATTRIBUTE_DESTINATION = 'destination';
 
+    public const ATTRIBUTE_SOURCE = 'source';
+
     public function getDestination(): ?string
     {
         return $this->getAttribute(self::ATTRIBUTE_DESTINATION);
@@ -24,6 +26,16 @@ class DropletsCreateForSubject extends Action
     public function withDestination(?string $destination): self
     {
         return $this->fillAttributes([self::ATTRIBUTE_DESTINATION => $destination]);
+    }
+
+    public function getSource(): ?string
+    {
+        return $this->getAttribute(self::ATTRIBUTE_SOURCE);
+    }
+
+    public function withSource(?string $source): self
+    {
+        return $this->fillAttributes([self::ATTRIBUTE_SOURCE => $source]);
     }
 
     protected function findParams(): array
@@ -42,6 +54,7 @@ class DropletsCreateForSubject extends Action
         $data['subject'] = $data['subject'] ?? $this->getSubject()->getManager()->getMorphName();
         $data['subject_id'] = $data['subject_id'] ?? $this->getSubject()->id;
         $data['destination'] = $data['destination'] ?? $this->getDestination();
+        $data['source'] = $data['source'] ?? $this->getSource();
         $data['status'] = $data['status'] ?? Pending::NAME;
         return $data;
     }
