@@ -8,12 +8,12 @@ use Bytic\Actions\Behaviours\HasSubject\HasSubject;
 use Pipetic\Bundle\Droplets\Statuses\Pending;
 use Pipetic\Bundle\Droplets\Actions\Behaviours\HasRepository;
 
-class DropletsCreateForSubject extends DropletsCreateForAbstract
+class DropletsCreateForSubjectRef extends DropletsCreateForAbstract
 {
-    protected function findParams(): array
+    protected function findUniqueFields(): array
     {
-        $params = parent::findParams();
-        $params['where'][] = ['destination = ?', $this->getDestination()];
-        return $params;
+        $fields = parent::findUniqueFields();
+        $fields[] = 'ref';
+        return $fields;
     }
 }
