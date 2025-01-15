@@ -31,4 +31,9 @@ trait DropletTrait
         $this->tries++;
         $this->save();
     }
+
+    public function getRef()
+    {
+        return $this->getAttribute('ref');
+    }
 }
