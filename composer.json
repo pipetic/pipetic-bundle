@@ -23,7 +23,7 @@
     }
   },
   "require": {
-    "php": ">=8.0",
+    "php": ">=8.2",
     "ext-json": "*",
     "bytic/package-base": "^1.0",
     "bytic/controllers": "^1.0",
