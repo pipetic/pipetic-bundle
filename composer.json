@@ -38,7 +38,7 @@
     "bytic/translation": "^1.0|^2.0",
     "bytic/actions": "dev-main||^1.0",
     "bytic/utility": "^1.0.73||^2.0",
-    "bytic/money": "^1.0||^2.0",
+    "bytic/money": "^1.0||^2.0"
   },
   "require-dev": {
     "bytic/view": "^1.0|^2.0",
