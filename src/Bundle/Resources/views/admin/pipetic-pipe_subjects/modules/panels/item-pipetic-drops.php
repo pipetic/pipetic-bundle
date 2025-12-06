@@ -16,7 +16,7 @@ $card = Card::make()
     ->withView($this)
     ->withViewContent(
         '/pipetic-droplets/modules/lists/subject',
-        []
+        ['items' => $this->pipetic_drops]
     );
 ?>
 <?= $card; ?>
