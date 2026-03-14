@@ -2,8 +2,8 @@
   "name": "pipetic/bundle",
   "type": "library",
   "license": "MIT",
-  "description": "Salesforce adapter for Pipetic – OAuth2 connection and ETL data-sync pipeline",
-  "keywords": ["salesforce", "oauth2", "etl", "pipeline", "sync", "saas"],
+  "description": "Pipetic Bundle",
+  "keywords": ["etl", "pipeline", "sync", "saas"],
   "homepage": "https://github.com/pipetic/pipetic-bundle",
   "authors": [
     {
@@ -38,11 +38,7 @@
     "bytic/translation": "^1.0|^2.0",
     "bytic/actions": "dev-main||^1.0",
     "bytic/utility": "^1.0.73||^2.0",
-    "bytic/money": "^1.0||^2.0",
-    "league/oauth2-client": "^2.7",
-    "psr/http-client": "^1.0",
-    "psr/http-message": "^1.0|^2.0",
-    "psr/http-factory": "^1.0"
+    "bytic/money": "^1.0||^2.0"
   },
   "require-dev": {
     "bytic/view": "^1.0|^2.0",

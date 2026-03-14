@@ -16,7 +16,7 @@ use Pipetic\Bundle\Pipeline\Contracts\TransformerInterface;
  * Usage:
  *
  *   (new Pipeline())
- *       ->extract(new SalesforceContactExtractor($client))
+ *       ->extract(new MySourceExtractor())
  *       ->pipe(new MapFieldsTransformer($fieldMap))
  *       ->pipe(new ValidateRecordTransformer())
  *       ->load(new LocalDatabaseLoader($repository))
