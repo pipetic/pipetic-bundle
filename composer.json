@@ -3,7 +3,7 @@
   "type": "library",
   "license": "MIT",
   "description": "Pipetic Bundle",
-  "keywords": [],
+  "keywords": ["etl", "pipeline", "sync", "saas"],
   "homepage": "https://github.com/pipetic/pipetic-bundle",
   "authors": [
     {
